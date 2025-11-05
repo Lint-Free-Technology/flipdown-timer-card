@@ -1,6 +1,6 @@
 {
   "name": "flipdown-timer-card",
-  "version": "0.9.0-dev.1",
+  "version": "1.0.0",
   "description": "Flipdown timer card for lovelace",
   "main": "dist/flipdown-timer-card.js",
   "type": "module",
