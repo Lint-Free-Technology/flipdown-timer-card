@@ -1,0 +1,65 @@
+{
+  "name": "flipdown-timer-card",
+  "version": "0.9.0.dev1",
+  "description": "Flipdown timer card for lovelace",
+  "main": "dist/flipdown-timer-card.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run lint && npm run rollup",
+    "rollup": "rollup -c",
+    "babel": "babel dist/flipdown-timer-card.js --out-file dist/flipdown-timer-card.js",
+    "lint": "eslint src/*.ts",
+    "watch": "rollup -c --watch",
+    "postversion": "npm run build",
+    "audit-fix": "npx yarn-audit-fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/custom-cards/button-card.git"
+  },
+  "keywords": [
+    "lovelace"
+  ],
+  "author": "pmongloid",
+  "contributors": [
+    "Darryn Capes-Davis (https://github.com/dcpaslock)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/custom-cards/button-card/issues"
+  },
+  "homepage": "https://github.com/custom-cards/button-card#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^28.0.9",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "9.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "npm": "^11.5.2",
+    "prettier": "^3.6.2",
+    "prettier-eslint": "^16.4.2",
+    "rollup": "^4.52.5",
+    "rollup-plugin-serve": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-lit-plugin": "^2.0.2",
+    "typescript": "^5.9.3",
+    "typescript-styled-plugin": "^0.18.3",
+    "yarn-audit-fix": "^10.1.1"
+  },
+  "dependencies": {
+    "custom-card-helpers": "^1.9.0",
+    "lit": "^3.3.1",
+    "lit-element": "^4.2.1",
+    "lit-html": "^3.3.1"
+  }
+}

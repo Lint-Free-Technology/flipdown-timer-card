@@ -1,0 +1,80 @@
+default_config:
+lovelace:
+  mode: storage
+  dashboards:
+    lovelace-yaml:
+      mode: yaml
+      title: yaml
+      filename: test/ui-lovelace.yaml
+
+demo:
+
+script:
+  delay_script:
+    alias: Delay Script
+    sequence:
+      - delay: '00:00:10'
+
+input_number:
+  test:
+    icon: mdi:battery-charging-outline
+    min: 0
+    max: 255
+    step: 5
+
+homeassistant:
+  customize:
+    switch.skylight:
+      device_class: switch
+  media_dirs:
+    localmedia: /config/www/workspace/test/www/media-source/
+
+switch:
+  - platform: template
+    switches:
+      skylight:
+        value_template: "{{ states('input_number.test') | int == 255 }}"
+        turn_on:
+          service: input_number.set_value
+          data:
+            entity_id: input_number.test
+            value: '255'
+        turn_off:
+          service: input_number.set_value
+          data:
+            entity_id: input_number.test
+            value: '0'
+
+binary_sensor:
+  - platform: template
+    sensors:
+      bsensor1:
+        friendly_name: Binary 1
+        value_template: "{{ states('switch.skylight') == 'on' }}"
+        device_class: door
+
+light:
+  - platform: template
+    lights:
+      test_light:
+        friendly_name: 'Test Light'
+        level_template: '{{ states.sensor.sensor1.state | int }}'
+        value_template: '{{ states.sensor.sensor1.state | int > 0 }}'
+        turn_on:
+          service: input_number.set_value
+          data:
+            entity_id: input_number.test
+            value: '255'
+        turn_off:
+          service: input_number.set_value
+          data:
+            entity_id: input_number.test
+            value: '0'
+        set_level:
+          service: input_number.set_value
+          data_template:
+            value: '{{ brightness }}'
+
+timer:
+  laundry:
+    duration: '01:00:10'

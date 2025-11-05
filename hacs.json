@@ -1,0 +1,7 @@
+{
+  "name": "flipdown-timer-card",
+  "content_in_root": false,
+  "render_readme": true,
+  "filename": "flipdown-timer-card.js",
+  "homeassistant": "2025.10.0"
+}
