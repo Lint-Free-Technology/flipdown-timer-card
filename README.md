@@ -138,3 +138,4 @@ styles:
 
 - Original Flipdown Timer Card by [pmongloid](https://github.com/pmongloid/flipdown-timer-card)
 - This card is based on the work of [@PButcher/flipdown](https://github.com/PButcher/flipdown) and [@iantrich](https://github.com/iantrich)'s boilerplate card
+- This repository uses Build, CI and Release configuration based on [button-card](https://github.com/custom-cards/button-card) by [@RomRider](https://github.com/RomRider)
