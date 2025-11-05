@@ -1,6 +1,6 @@
 {
   "name": "flipdown-timer-card",
-  "version": "0.9.0.dev.1",
+  "version": "0.9.0-dev.1",
   "description": "Flipdown timer card for lovelace",
   "main": "dist/flipdown-timer-card.js",
   "type": "module",
@@ -45,6 +45,7 @@
     "@semantic-release/release-notes-generator": "^14.0.3",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "eslint": "9.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",

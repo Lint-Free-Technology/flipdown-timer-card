@@ -4,7 +4,7 @@
 
 Card for timer entities in the Lovelace user interface of Home Assistant ![Default](card.png)
 
-> This repository rebuilt from source contained in the original Flipdown Timer Card by [pmongloid](https://github.com/pmongloid/flipdown-timer-card)
+> This repository rebuilt from source contained in the original Flipdown Timer Card by [pmongloid](https://github.com/pmongloid/flipdown-timer-card).
 
 ## Features
 
