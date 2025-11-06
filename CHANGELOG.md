@@ -1,3 +1,13 @@
+## [1.1.0-dev.1](https://github.com/dcapslock/flipdown-timer-card/compare/v1.0.1...v1.1.0-dev.1) (2025-11-06)
+
+### Features
+
+* Modern GUI Editor ([#6](https://github.com/dcapslock/flipdown-timer-card/issues/6)) ([bfe3fea](https://github.com/dcapslock/flipdown-timer-card/commit/bfe3fea202ae9eef3b904d715269fb8dd042a46c))
+
+### Documentation
+
+* Change duration type from string to object ([7b7b9f6](https://github.com/dcapslock/flipdown-timer-card/commit/7b7b9f67e337094977a2d58587e01fcdfdf95c62))
+
 ## [1.0.1](https://github.com/dcapslock/flipdown-timer-card/compare/v1.0.0...v1.0.1) (2025-11-05)
 
 ### Bug Fixes
