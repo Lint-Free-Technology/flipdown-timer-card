@@ -23,7 +23,7 @@ Card for timer entities in the Lovelace user interface of Home Assistant ![Defau
 | ----------- | ------- | ------------ | -------------------------------------------------------- | ------- |
 | type        | string  | **Required** | `custom:flipdown-timer-card`                             |         |
 | entity      | string  | **Required** | Timer, Input_datetime(with both date and time) entity    |         |
-| duration    | string  | **Optional** | Timer duration indicated when idle. Should be 'hh:mm:ss' |         |
+| duration    | object  | **Optional** | Timer duration indicated when idle. Object with attributes `hours`, `minutes`, `seconds` |         |
 | theme       | string  | **Optional** | Colorscheme `hass`, `dark`, `light`                      | `hass`  |
 | show_title  | boolean | **Optional** | Show card title                                          | `false` |
 | show_header | boolean | **Optional** | Show rotor headings                                      | `false` |
@@ -114,7 +114,10 @@ show_hour: false
 show_title: false
 show_header: false
 theme: dark
-duration: '00:00:00'
+duration:
+  - hours: 0
+  - minutes: 0
+  - seconds: 0
 localize:
   button: 시작, 정지, 취소, 계속, 리셋
   header: 시, 분, 초
