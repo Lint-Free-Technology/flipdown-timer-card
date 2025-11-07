@@ -1,3 +1,20 @@
+## [1.1.0](https://github.com/dcapslock/flipdown-timer-card/compare/v1.0.1...v1.1.0) (2025-11-07)
+
+### Features
+
+* Add Flipdown CSS vars for theming ([#8](https://github.com/dcapslock/flipdown-timer-card/issues/8)) ([a7ed5b1](https://github.com/dcapslock/flipdown-timer-card/commit/a7ed5b15e5589c1cf9ccbeb190e27028d0023dc7))
+* Modern GUI Editor ([#6](https://github.com/dcapslock/flipdown-timer-card/issues/6)) ([bfe3fea](https://github.com/dcapslock/flipdown-timer-card/commit/bfe3fea202ae9eef3b904d715269fb8dd042a46c))
+
+### Bug Fixes
+
+* Apply header text shadow for light and dark thems to allow text to be shown even if theme out of place. ([#9](https://github.com/dcapslock/flipdown-timer-card/issues/9)) ([17226e4](https://github.com/dcapslock/flipdown-timer-card/commit/17226e4f3328cb8830e2b50abd5a44271bdc68e1))
+
+### Documentation
+
+* Add credit to button-card and [@romrider](https://github.com/romrider) ([1b855fc](https://github.com/dcapslock/flipdown-timer-card/commit/1b855fcb36118726fef40cfe2f679b7c54e1bf31))
+* Change duration type from string to object ([7b7b9f6](https://github.com/dcapslock/flipdown-timer-card/commit/7b7b9f67e337094977a2d58587e01fcdfdf95c62))
+* Flipdown CSS variable added to README ([#10](https://github.com/dcapslock/flipdown-timer-card/issues/10)) ([2c1236d](https://github.com/dcapslock/flipdown-timer-card/commit/2c1236d94d399cf895cd7471fb43025debda40ec))
+
 ## [1.1.0-dev.2](https://github.com/dcapslock/flipdown-timer-card/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2025-11-07)
 
 ### Features
