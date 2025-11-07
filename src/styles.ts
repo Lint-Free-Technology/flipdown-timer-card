@@ -11,6 +11,7 @@ export const styles = css`
   /* Rotor group headings */
   .flipdown.flipdown__theme-hass .rotor-group-heading:before {
     color: var(--flipdown-primary-color, var(--primary-color));
+    text-shadow: var(--flipdown-header-text-shadow, none);
   }
   /* Delimeters */
   /* Rotor tops */
@@ -47,6 +48,7 @@ export const styles = css`
   /* Rotor group headings */
   .flipdown.flipdown__theme-dark .rotor-group-heading:before {
     color: var(--flipdown-primary-color, #ffffff);
+    text-shadow: var(--flipdown-header-text-shadow, 1px 1px 0px var(--flipdown-primary-background-color, #151515));
   }
   /* Delimeters */
   /* Rotor tops */
@@ -83,6 +85,7 @@ export const styles = css`
   /* Rotor group headings */
   .flipdown.flipdown__theme-light .rotor-group-heading:before {
     color: var(--flipdown-primary-color, #222222);
+    text-shadow: var(--flipdown-header-text-shadow, 1px 1px 0px var(--flipdown-primary-background-color, #dddddd));
   }
   /* Rotor tops */
   .flipdown.flipdown__theme-light .rotor,
