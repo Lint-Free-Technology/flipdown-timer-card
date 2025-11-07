@@ -1,6 +1,6 @@
 import { LitElement, html, TemplateResult, PropertyValues, CSSResultGroup, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { HomeAssistant, hasConfigOrEntityChanged, LovelaceCardEditor, getLovelace } from 'custom-card-helpers'; // This is a community maintained npm module with common helper functions/types
+import { HomeAssistant, hasConfigOrEntityChanged, LovelaceCardEditor } from 'custom-card-helpers'; // This is a community maintained npm module with common helper functions/types
 
 import './editor';
 
@@ -48,18 +48,29 @@ export class FlipdownTimer extends LitElement {
 
   // https://lit-element.polymer-project.org/guide/properties#accessors-custom
   public setConfig(config: FlipdownTimerCardConfig): void {
-    // TODO Check for required fields and that they are of the proper format
     if (!config) {
       throw new Error(localize('common.invalid_configuration'));
-    }
-
-    if (config.test_gui) {
-      getLovelace().setEditMode(true);
     }
 
     this.config = {
       ...config,
     };
+
+    // Upgrade duration from string to object
+    if (typeof this.config.duration === 'string') {
+      const [hours, minutes, seconds] = (this.config.duration as string).split(':').map(Number);
+      this.config.duration = { hours, minutes, seconds };
+    }
+
+    // Normalise show_hour from string
+    if (typeof this.config.show_hour === 'string') {
+      this.config.show_hour =
+        this.config.show_hour.toLowerCase() === 'true'
+          ? true
+          : this.config.show_hour.toLowerCase() === 'auto'
+            ? 'auto'
+            : false;
+    }
 
     let localizeBtn = ['start', 'stop', 'cancel', 'resume', 'reset'];
     let localizeHeader = ['Hours', 'Minutes', 'Seconds'];
@@ -85,8 +96,8 @@ export class FlipdownTimer extends LitElement {
 
     if (!this.config.styles) {
       this.config.styles = {
-        rotor: false,
-        button: false,
+        rotor: undefined,
+        button: undefined,
       };
     }
   }
@@ -169,7 +180,13 @@ export class FlipdownTimer extends LitElement {
 
   protected _reset(): void {
     const state = this.hass.states[this.config.entity!];
-    const duration = durationToSeconds(this.config.duration ? this.config.duration : state.attributes.duration);
+    const configDuration: string | boolean =
+      this.config.duration === undefined
+        ? false
+        : `${this.config.duration?.hours ? String(this.config.duration.hours).padStart(2, '0') : '00'}
+          :${this.config.duration?.minutes ? String(this.config.duration.minutes).padStart(2, '0') : '00'}
+          :${this.config.duration?.seconds ? String(this.config.duration.seconds).padStart(2, '0') : '00'}`;
+    const duration = durationToSeconds(configDuration || state.attributes.duration);
     this.fd.rt = duration;
     this.fd._tick(true);
   }
@@ -210,15 +227,15 @@ export class FlipdownTimer extends LitElement {
           <div
             class="flipdown_shell"
             style="
-            --rotor-width:  ${(this.config.styles.rotor && this.config.styles.rotor.width) || '50px'};
-            --rotor-height: ${(this.config.styles.rotor && this.config.styles.rotor.height) || '80px'};
-            --rotor-space:  ${(this.config.styles.rotor && this.config.styles.rotor.space) || '20px'};
-            --rotor-fontsize:  ${(this.config.styles.rotor && this.config.styles.rotor.fontsize) || '4rem'};
-            --button-fontsize:  ${(this.config.styles.button && this.config.styles.button.fontsize) || '1em'};
-            ${this.config.styles.button &&
-            this.config.styles.button.width &&
+            --rotor-width:  ${(this.config.styles?.rotor && this.config.styles.rotor.width) || '50px'};
+            --rotor-height: ${(this.config.styles?.rotor && this.config.styles.rotor.height) || '80px'};
+            --rotor-space:  ${(this.config.styles?.rotor && this.config.styles.rotor.space) || '20px'};
+            --rotor-fontsize:  ${(this.config.styles?.rotor && this.config.styles.rotor.fontsize) || '4rem'};
+            --button-fontsize:  ${(this.config.styles?.button && this.config.styles.button.fontsize) || '1em'};
+            ${this.config.styles?.button &&
+            this.config.styles?.button.width &&
             '--button-width: ' + this.config.styles.button.width + ';'}
-            ${this.config.styles.button &&
+            ${this.config.styles?.button &&
             this.config.styles.button.height &&
             '--button-height: ' + this.config.styles.button.height + ';'}
           "
@@ -239,7 +256,7 @@ export class FlipdownTimer extends LitElement {
     let button_location;
 
     if (domain == 'timer') {
-      if (this.config.styles.button && this.config.styles.button.hasOwnProperty('location')) {
+      if (this.config.styles?.button && this.config.styles.button.hasOwnProperty('location')) {
         button_location = this.config.styles.button.location;
       } else {
         button_location = 'right';

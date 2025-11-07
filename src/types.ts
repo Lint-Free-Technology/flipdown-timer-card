@@ -6,13 +6,31 @@ declare global {
     'hui-error-card': LovelaceCard;
   }
 }
-
-// TODO Add your configuration elements here for type-checking
 export interface FlipdownTimerCardConfig extends LovelaceCardConfig {
   type: string;
   name?: string;
-  show_warning?: boolean;
-  show_error?: boolean;
-  test_gui?: boolean;
   entity: string;
+  duration?: {
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+  };
+  show_title?: boolean;
+  show_header?: boolean;
+  show_hour?: boolean | 'auto';
+  theme?: 'hass' | 'dark' | 'light';
+  styles?: {
+    rotor?: {
+      height?: number;
+      width?: number;
+      space?: number;
+      fontsize?: string;
+    };
+    button?: {
+      width?: number;
+      height?: number;
+      fontsize?: string;
+      location?: 'right' | 'left' | 'hide';
+    };
+  };
 }

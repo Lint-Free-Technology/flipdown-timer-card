@@ -10,33 +10,34 @@ export const styles = css`
   }
   /* Rotor group headings */
   .flipdown.flipdown__theme-hass .rotor-group-heading:before {
-    color: var(--primary-color);
+    color: var(--flipdown-primary-color, var(--primary-color));
+    text-shadow: var(--flipdown-header-text-shadow, none);
   }
   /* Delimeters */
   /* Rotor tops */
   .flipdown.flipdown__theme-hass .rotor,
   .flipdown.flipdown__theme-hass .rotor-top,
   .flipdown.flipdown__theme-hass .rotor-leaf-front {
-    color: var(--text-primary-color);
-    background-color: var(--primary-color);
+    color: var(--flipdown-primary-color, var(--text-primary-color));
+    background-color: var(--flipdown-primary-background-color, var(--primary-color));
   }
   /* Rotor bottoms */
   .flipdown.flipdown__theme-hass .rotor-bottom,
   .flipdown.flipdown__theme-hass .rotor-leaf-rear {
-    color: var(--text-primary-color);
-    background-color: var(--primary-color);
+    color: var(--flipdown-secondary-color, var(--text-primary-color));
+    background-color: var(--flipdown-secondary-background-color, var(--primary-color));
   }
   /* Hinge */
   .flipdown.flipdown__theme-hass .rotor:after {
-    border-top: solid 1px var(--dark-primary-color);
+    border-top: solid 1px var(--flipdown-primary-background-color, var(--dark-primary-color));
   }
   .flipdown.flipdown__theme-hass .delimeter span {
-    background-color: var(--primary-color);
+    background-color: var(--flipdown-primary-background-color, var(--primary-color));
   }
   .flipdown.flipdown__theme-hass .btn-top,
   .flipdown.flipdown__theme-hass .btn-bottom {
-    background-color: var(--dark-primary-color);
-    color: var(--text-primary-color);
+    background-color: var(--flipdown-primary-background-color, var(--dark-primary-color));
+    color: var(--flipdown-primary-color, var(--text-primary-color));
   }
   /********** Theme: dark **********/
   /* Font styles */
@@ -46,33 +47,34 @@ export const styles = css`
   }
   /* Rotor group headings */
   .flipdown.flipdown__theme-dark .rotor-group-heading:before {
-    color: #000000;
+    color: var(--flipdown-primary-color, #ffffff);
+    text-shadow: var(--flipdown-header-text-shadow, 1px 1px 0px var(--flipdown-primary-background-color, #151515));
   }
   /* Delimeters */
   /* Rotor tops */
   .flipdown.flipdown__theme-dark .rotor,
   .flipdown.flipdown__theme-dark .rotor-top,
   .flipdown.flipdown__theme-dark .rotor-leaf-front {
-    color: #ffffff;
-    background-color: #151515;
+    color: var(--flipdown-primary-color, #ffffff);
+    background-color: var(--flipdown-primary-background-color, #151515);
   }
   /* Rotor bottoms */
   .flipdown.flipdown__theme-dark .rotor-bottom,
   .flipdown.flipdown__theme-dark .rotor-leaf-rear {
-    color: #efefef;
-    background-color: #202020;
+    color: var(--flipdown-secondary-color, #efefef);
+    background-color: var(--flipdown-secondary-background-color, #202020);
   }
   /* Hinge */
   .flipdown.flipdown__theme-dark .rotor:after {
-    border-top: solid 1px #151515;
+    border-top: solid 1px var(--flipdown-primary-background-color, #151515);
   }
   .flipdown.flipdown__theme-dark .delimeter span {
-    background-color: #151515;
+    background-color: var(--flipdown-primary-background-color, #151515);
   }
   .flipdown.flipdown__theme-dark .btn-top,
   .flipdown.flipdown__theme-dark .btn-bottom {
-    background-color: #202020;
-    color: #ffffff;
+    background-color: var(--flipdown-primary-background-color, #151515);
+    color: var(--flipdown-primary-color, #ffffff);
   }
   /********** Theme: light **********/
   /* Font styles */
@@ -82,37 +84,33 @@ export const styles = css`
   }
   /* Rotor group headings */
   .flipdown.flipdown__theme-light .rotor-group-heading:before {
-    color: #eeeeee;
-  }
-  /* Delimeters */
-  .flipdown.flipdown__theme-light .rotor-group:nth-child(n + 1):nth-child(-n + 2):before,
-  .flipdown.flipdown__theme-light .rotor-group:nth-child(n + 1):nth-child(-n + 2):after {
-    background-color: #dddddd;
+    color: var(--flipdown-primary-color, #222222);
+    text-shadow: var(--flipdown-header-text-shadow, 1px 1px 0px var(--flipdown-primary-background-color, #dddddd));
   }
   /* Rotor tops */
   .flipdown.flipdown__theme-light .rotor,
   .flipdown.flipdown__theme-light .rotor-top,
   .flipdown.flipdown__theme-light .rotor-leaf-front {
-    color: #222222;
-    background-color: #dddddd;
+    color: var(--flipdown-primary-color, #222222);
+    background-color: var(--flipdown-primary-background-color, #dddddd);
   }
   /* Rotor bottoms */
   .flipdown.flipdown__theme-light .rotor-bottom,
   .flipdown.flipdown__theme-light .rotor-leaf-rear {
-    color: #333333;
-    background-color: #eeeeee;
+    color: var(--flipdown-secondary-color, #333333);
+    background-color: var(--flipdown-secondary-background-color, #eeeeee);
   }
   /* Hinge */
   .flipdown.flipdown__theme-light .rotor:after {
-    border-top: solid 1px #222222;
+    border-top: solid 1px var(--flipdown-primary-color, #222222);
   }
   .flipdown.flipdown__theme-light .delimeter span {
-    background-color: #eeeeee;
+    background-color: var(--flipdown-primary-background-color, #eeeeee);
   }
   .flipdown.flipdown__theme-light .btn-top,
   .flipdown.flipdown__theme-light .btn-bottom {
-    background-color: #dddddd;
-    color: #222222;
+    background-color: var(--flipdown-primary-background-color, #dddddd);
+    color: var(--flipdown-primary-color, #222222);
   }
   /* END OF THEMES */
   .flipdown_shell {
@@ -133,8 +131,8 @@ export const styles = css`
   }
 
   .flipdown .delimeter {
-    width: var(--rotor-space, 20px);
-    height: var(--rotor-height, 80px);
+    width: var(--flipdown-rotor-space, var(--rotor-space, 20px));
+    height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
     position: relative;
     float: left;
   }
@@ -150,7 +148,7 @@ export const styles = css`
   }
 
   .flipdown .rotor-group-heading {
-    width: calc(var(--rotor-width, 50px) * 2 + 5px);
+    width: calc(var(--flipdown-rotor-width, var(--rotor-width, 50px)) * 2 + 5px);
     height: 30px;
   }
 
@@ -181,8 +179,8 @@ export const styles = css`
     position: absolute;
     bottom: 0px;
     left: 0px;
-    width: var(--rotor-width, 50px);
-    height: calc(var(--rotor-height, 80px) / 2);
+    width: var(--flipdown-rotor-width, var(--rotor-width, 50px));
+    height: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2);
     border-radius: 0px 0px 4px 4px;
   }
 
@@ -194,20 +192,20 @@ export const styles = css`
     left: calc(50% - 5px);
   }
   .flipdown .delimeter-span-top {
-    top: calc(var(--rotor-height, 80px) / 2 - 20px);
+    top: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2 - 20px);
   }
   .flipdown .delimeter-span-bottom {
-    bottom: calc(var(--rotor-height, 80px) / 2 - 20px);
+    bottom: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2 - 20px);
   }
 
   .flipdown .rotor {
     position: relative;
     float: left;
-    width: var(--rotor-width, 50px);
-    height: var(--rotor-height, 80px);
+    width: var(--flipdown-rotor-width, var(--rotor-width, 50px));
+    height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
     margin: 0px 5px 0px 0px;
     border-radius: 4px;
-    font-size: var(--rotor-fontsize);
+    font-size: var(--flipdown-rotor-fontsize, var(--rotor-fontsize));
     text-align: center;
     perspective: 200px;
   }
@@ -222,7 +220,7 @@ export const styles = css`
 
   .flipdown .button-group.button-right {
     float: right;
-    padding-left: var(--rotor-space, 20px);
+    padding-left: var(--flipdown-rotor-space, var(--rotor-space, 20px));
   }
 
   .flipdown .button-group.button-right .button-group-heading {
@@ -234,8 +232,8 @@ export const styles = css`
   .flipdown .button-group.button-right .btn {
     position: relative;
     float: left;
-    width: var(--button-width, 50px);
-    height: var(--rotor-height, 80px);
+    width: var(--flipdown-button-width, var(--button-width, 50px));
+    height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
     margin: 0px 0px 0px 0px;
     border-radius: 4px;
     text-align: center;
@@ -246,14 +244,14 @@ export const styles = css`
     overflow: hidden;
     position: absolute;
     left: 0px;
-    width: var(--button-width, 50px);
+    width: var(--flipdown-button-width, var(--button-width, 50px));
     margin: 0px;
-    height: calc(var(--rotor-height, 80px) / 2 - 2px);
+    height: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2 - 2px);
     padding: 0px;
     border-radius: 4px;
     border: 0px;
     font-family: sans-serif;
-    font-size: var(--button-fontsize);
+    font-size: var(--flipdown-button-fontsize, var(--button-fontsize));
   }
 
   .flipdown .button-group.button-right .btn-bottom {
@@ -272,17 +270,20 @@ export const styles = css`
   .flipdown .button-group.button-bottom .btn-top,
   .flipdown .button-group.button-bottom .btn-bottom {
     overflow: hidden;
-    width: var(--button-width, calc(var(--rotor-width, 50px) * 2 + 5px));
+    width: var(
+      var(--flipdown-button-width, var(--button-width, 50px)),
+      calc(var(--flipdown-rotor-width, var(--rotor-width, 50px)) * 2 + 5px)
+    );
     margin: 0px;
-    height: var(--button-height, 20px);
+    height: var(--flipdown-button-height, var(--button-height, 20px));
     padding: 0px;
     border-radius: 4px;
     border: 0px;
     font-family: sans-serif;
-    font-size: var(--button-fontsize);
+    font-size: var(--flipdown-button-fontsize, var(--button-fontsize));
   }
   .flipdown .button-group.button-bottom .btn-bottom {
-    margin-left: var(--rotor-space, 20px);
+    margin-left: var(--flipdown-rotor-space, var(--rotor-space, 20px));
   }
 
   .flipdown .rotor:last-child {
@@ -293,15 +294,15 @@ export const styles = css`
   .flipdown .rotor-bottom {
     overflow: hidden;
     position: absolute;
-    width: var(--rotor-width, 50px);
-    height: calc(var(--rotor-height, 80px) / 2);
+    width: var(--flipdown-rotor-width, var(--rotor-width, 50px));
+    height: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2);
   }
 
   .flipdown .rotor-trans-top,
   .flipdown .rotor-trans-bottom {
     position: absolute;
-    width: var(--rotor-width, 50px);
-    height: calc(var(--rotor-height, 80px) / 2);
+    width: var(--flipdown-rotor-width, var(--rotor-width, 50px));
+    height: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2);
     z-index: 1000;
   }
 
@@ -312,8 +313,8 @@ export const styles = css`
   .flipdown .rotor-leaf {
     z-index: 1;
     position: absolute;
-    width: var(--rotor-width, 50px);
-    height: var(--rotor-height, 80px);
+    width: var(--flipdown-rotor-width, var(--rotor-width, 50px));
+    height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
     transform-style: preserve-3d;
     transition: transform 0s;
   }
@@ -342,8 +343,8 @@ export const styles = css`
   .flipdown .rotor-leaf-rear {
     overflow: hidden;
     position: absolute;
-    width: var(--rotor-width, 50px);
-    height: calc(var(--rotor-height, 80px) / 2);
+    width: var(--flipdown-rotor-width, var(--rotor-width, 50px));
+    height: calc(var(--flipdown-rotor-height, var(--rotor-height, 80px)) / 2);
     margin: 0;
     transform: rotateX(0deg);
     backface-visibility: hidden;
@@ -351,7 +352,7 @@ export const styles = css`
   }
 
   .flipdown .rotor-leaf-front {
-    line-height: var(--rotor-height, 80px);
+    line-height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
     border-radius: 4px;
   }
 
@@ -368,11 +369,11 @@ export const styles = css`
 
   .flipdown .rear-bottom {
     bottom: 0px;
-    line-height: var(--rotor-height, 80px);
+    line-height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
   }
 
   .flipdown .rotor-top {
-    line-height: var(--rotor-height, 80px);
+    line-height: var(--flipdown-rotor-height, var(--rotor-height, 80px));
     border-radius: 4px 4px 0px 0px;
   }
 
