@@ -19,17 +19,17 @@ Card for timer entities in the Lovelace user interface of Home Assistant ![Defau
 
 ## Configuration
 
-| Name        | Type    | Requirement  | Description                                              | Default |
-| ----------- | ------- | ------------ | -------------------------------------------------------- | ------- |
-| type        | string  | **Required** | `custom:flipdown-timer-card`                             |         |
-| entity      | string  | **Required** | Timer, Input_datetime(with both date and time) entity    |         |
-| duration    | object  | **Optional** | Timer duration indicated when idle. Object with attributes `hours`, `minutes`, `seconds` |         |
-| theme       | string  | **Optional** | Colorscheme `hass`, `dark`, `light`                      | `hass`  |
-| show_title  | boolean | **Optional** | Show card title                                          | `false` |
-| show_header | boolean | **Optional** | Show rotor headings                                      | `false` |
-| show_hour   | string  | **Optional** | Show hour rotors `true`, `false`, `auto`                 | `false` |
-| styles      | object  | **Optional** | Card style                                               |         |
-| localize    | object  | **Optional** | Card text localization                                   |         |
+| Name | Type | Requirement | Description | Default |
+| --- | --- | --- | --- | --- |
+| type | string | **Required** | `custom:flipdown-timer-card` |  |
+| entity | string | **Required** | Timer, Input_datetime(with both date and time) entity |  |
+| duration | object | **Optional** | Timer duration indicated when idle. Object with attributes `hours`, `minutes`, `seconds` |  |
+| theme | string | **Optional** | Colorscheme `hass`, `dark`, `light` | `hass` |
+| show_title | boolean | **Optional** | Show card title | `false` |
+| show_header | boolean | **Optional** | Show rotor headings | `false` |
+| show_hour | string | **Optional** | Show hour rotors `true`, `false`, `auto` | `false` |
+| styles | object | **Optional** | Card style |  |
+| localize | object | **Optional** | Card text localization |  |
 
 ### **Duration**
 
@@ -132,6 +132,25 @@ styles:
     fontsize: 1.5em
     location: bottom
 ```
+
+## Flipdown CSS variables
+
+The following CSS variables are available to use in Home Assistant themes or to apply to `ha-card` via card-mod. These will override any Rotor style, Button style or Theme set in Flipdown Timer Card config.
+
+| Variable | Applies to | Valid value | Overrides |
+| --- | --- | --- | --- |
+| `--flipdown-primary-color` | Text color for rotor top segments, buttons, header | CSS color | Theme config |
+| `--flipdown-primary-background-color` | Background color for rotor top segments, buttons, delimiters, hinge | CSS color | Theme config |
+| `--flipdown-secondary-color` | Text color for rotor bottom segments | CSS color | Theme config |
+| `--flipdown-secondary-background-color` | Background color for rotor bottom segments | CSS color | Theme config |
+| `--flipdown-header-text-shadow` | Text shadow used for header to allow for header to be visible in most scenarios. | Valid CSS text shadow. Defaults to `1px 1px 0px var(--flipdown-primary-background-color, <theme color>)` | Theme config |
+| `--flipdown-rotor-space` | Space between rotors | CSS size | Rotor space config |
+| `--flipdown-rotor-height` | Height of rotor | CSS size | Rotor height config |
+| `--flipdown-rotor-width` | Width of rotor | CSS size | Rotor width config |
+| `--flipdown-rotor-fontsize` | Rotor font size | CSS font size | Rotor fontsize config |
+| `--flipdown-button-width` | Button width | CSS size | Button withd config |
+| `--flipdown-button-height` | Button height. Only for when buttons are at bottom location. Otherwise button height is relative to rotor height | CSS size | Button height config |
+| `--flipdown-button-fontsize` | Button font size | CSS font size | Button fontsize config |
 
 ## Notes
 
