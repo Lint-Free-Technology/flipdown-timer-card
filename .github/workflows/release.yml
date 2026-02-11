@@ -2,6 +2,11 @@ name: Release
 
 on: workflow_dispatch
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 env:
   NODE_VERSION: '24.x'
   PYTHON_VERSION: '3.13'
