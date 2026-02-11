@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lint-Free-Technology/flipdown-timer-card.git"
+    "url": "git@github.com:Lint-Free-Technology/flipdown-timer-card.git"
   },
   "keywords": [
     "lovelace"
