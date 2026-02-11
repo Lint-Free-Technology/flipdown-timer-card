@@ -49,5 +49,6 @@ export default [
     watch: {
       exclude: 'node_modules/**',
     },
+    context: 'window',
   },
 ];

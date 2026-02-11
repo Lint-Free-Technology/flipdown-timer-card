@@ -11,11 +11,12 @@ import { FlipDown } from './library/flipdown.js';
 import { styles } from './styles';
 
 /* eslint no-console: 0 */
-console.info(
-  `%c  FLIPDOWN-TIMER-CARD \n%c  ${localize('common.version')} ${pjson.version}    `,
-  'color: orange; font-weight: bold; background: black',
-  'color: white; font-weight: bold; background: dimgray',
+console.groupCollapsed(
+  `%c💡 FLIPDOWN-TIMER-CARD ${pjson.version} IS INSTALLED 💡`,
+  'color: white; background-color: #CE3226; padding: 2px 5px; font-weight: bold; border-radius: 5px;',
 );
+console.log('Readme:', 'https://github.com/Lint-Free-Technology/flipdown-timer-card');
+console.groupEnd();
 
 // This puts your card into the UI card picker dialog
 (window as any).customCards = (window as any).customCards || [];

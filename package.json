@@ -1,6 +1,6 @@
 {
   "name": "flipdown-timer-card",
-  "version": "1.1.0",
+  "version": "1.1.1-dev.1",
   "description": "Flipdown timer card for lovelace",
   "main": "dist/flipdown-timer-card.js",
   "type": "module",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dcapslock/flipdown-timer-card.git"
+    "url": "git@github.com:Lint-Free-Technology/flipdown-timer-card.git"
   },
   "keywords": [
     "lovelace"
@@ -26,9 +26,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dcapslock/flipdown-timer-card/issues"
+    "url": "https://github.com/Lint-Free-Technology/flipdown-timer-card/issues"
   },
-  "homepage": "https://github.com/dcapslock/flipdown-timer-card#readme",
+  "homepage": "https://github.com/Lint-Free-Technology/flipdown-timer-card#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",

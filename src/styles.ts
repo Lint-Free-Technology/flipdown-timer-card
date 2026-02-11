@@ -270,10 +270,9 @@ export const styles = css`
   .flipdown .button-group.button-bottom .btn-top,
   .flipdown .button-group.button-bottom .btn-bottom {
     overflow: hidden;
-    width: var(
-      var(--flipdown-button-width, var(--button-width, 50px)),
-      calc(var(--flipdown-rotor-width, var(--rotor-width, 50px)) * 2 + 5px)
-    );
+    --flipdown-calculated-button-width: calc(var(--flipdown-rotor-width, var(--rotor-width, 50px)) * 2 + 5px);
+    --flipdown-styled-button-width: var(--flipdown-button-width, var(--button-width));
+    width: var(--flipdown-styled-button-width, var(--flipdown-calculated-button-width));
     margin: 0px;
     height: var(--flipdown-button-height, var(--button-height, 20px));
     padding: 0px;
