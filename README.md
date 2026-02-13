@@ -12,8 +12,11 @@ Card for timer entities in the Lovelace user interface of Home Assistant ![Defau
 
 ## Installation
 
-- Install using HACS.
-- Or Download the 'flipdown-timer-card.js' from the latest release.
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Lint-Free-Technology&repository=flipdown-timer-card&category=plugin)
+
+To install via HACS, add this repo [https://github.com/Lint-Free-Technology/Flipdown-Timer-Card](https://github.com/Lint-Free-Technology/lovelace-auto-entities) as a [custom HACS repository](https://www.hacs.xyz/docs/faq/custom_repositories/) using type `Dashboard`. Use the button above to do this in one step.
+
+For manual installation you can Download the 'flipdown-timer-card.js' from the latest release.
 
 ## Configuration
 
