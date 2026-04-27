@@ -1,3 +1,15 @@
+## [1.1.1](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.0...v1.1.1) (2026-02-11)
+
+### 🐞 Bug Fixes
+
+* Styling button width fails when buttons are placed at bottom. ([b1d363c](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/b1d363c7babf5ad63edeebbdebd353bf6c4bc9fb)), closes [#13](https://github.com/Lint-Free-Technology/flipdown-timer-card/issues/13)
+
+### ⚙️ Miscellaneous
+
+* Add context for rollup to fix formatjs warning/issue ([03a1f71](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/03a1f7137efa8580185eae4711a556223320fbc7))
+* Fix links in package.json ([4990551](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/49905511d405fabb91e5a2adc9fa5992435689f2))
+* Update console installed notification branding ([c25cb70](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/c25cb70bcb2beeff79537f04824ddb6506def9d4))
+
 ## [1.1.1-dev.1](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.0...v1.1.1-dev.1) (2026-02-11)
 
 ### Bug Fixes
