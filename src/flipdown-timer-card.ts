@@ -1,6 +1,6 @@
 import { LitElement, html, TemplateResult, PropertyValues, CSSResultGroup, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { HomeAssistant, hasConfigOrEntityChanged, LovelaceCardEditor } from 'custom-card-helpers'; // This is a community maintained npm module with common helper functions/types
+import { HomeAssistant, hasConfigOrEntityChanged, LovelaceCardEditor } from './ha-types'; // Minimal HA types and helpers defined locally
 
 import './editor';
 
