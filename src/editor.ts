@@ -1,5 +1,5 @@
 import { LitElement, html, TemplateResult, css } from 'lit';
-import { HomeAssistant, fireEvent, LovelaceCardEditor } from 'custom-card-helpers';
+import { HomeAssistant, fireEvent, LovelaceCardEditor } from './ha-types';
 
 import { FlipdownTimerCardConfig } from './types';
 import { customElement, property, state } from 'lit/decorators.js';
