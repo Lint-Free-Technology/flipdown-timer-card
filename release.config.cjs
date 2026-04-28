@@ -26,6 +26,7 @@ module.exports = {
             { type: 'test', hidden: false, section: '⚙️ Miscellaneous' },
           ],
         },
+        releaseRules: [{ type: 'refactor', release: 'patch' }],
       },
     ],
     '@semantic-release/changelog',
