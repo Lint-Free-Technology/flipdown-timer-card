@@ -62,15 +62,14 @@ export const fireEvent = (
     cancelable?: boolean;
     composed?: boolean;
   },
-): Event => {
+): CustomEvent => {
   const opts = options || {};
-  const eventDetail = detail === null || detail === undefined ? {} : detail;
-  const event = new Event(type, {
+  const event = new CustomEvent(type, {
     bubbles: opts.bubbles === undefined ? true : opts.bubbles,
     cancelable: Boolean(opts.cancelable),
     composed: opts.composed === undefined ? true : opts.composed,
+    detail: detail === null || detail === undefined ? {} : detail,
   });
-  (event as any).detail = eventDetail;
   node.dispatchEvent(event);
   return event;
 };
