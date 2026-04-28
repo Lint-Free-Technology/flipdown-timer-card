@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.1...v1.1.2) (2026-04-28)
+
+### ⚙️ Miscellaneous
+
+* **deps:** Update multiple build dependencies ([8bf0640](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/8bf06407a71b25aceb96b7168c08f0c1902bcb9b))
+
 ## [1.1.1](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.0...v1.1.1) (2026-02-11)
 
 ### 🐞 Bug Fixes
