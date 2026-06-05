@@ -18,11 +18,10 @@ jobs:
         with:
           node-version: lts/*
           cache: yarn
-      - name: Install yarn for ACT (local testing)
-        if: ${{ env.ACT }}
-        run: npm install -g yarn
+      - name: Enable Corepack
+        run: corepack enable
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Lint the code
         run: npm run lint --if-present
   build:
@@ -34,11 +33,10 @@ jobs:
         with:
           node-version: lts/*
           cache: yarn
-      - name: Install yarn for ACT (local testing)
-        if: ${{ env.ACT }}
-        run: npm install -g yarn
+      - name: Enable Corepack
+        run: corepack enable
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Build the project
         run: npm run build --if-present
 
