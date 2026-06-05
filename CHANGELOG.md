@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.3...v1.2.0) (2026-06-05)
+
+### ⭐ New Features
+
+* Add card suggestion for timer domain now available in Home Assistant 2026.6.0 ([0aa9bca](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/0aa9bca468429328961540f19b3a5a84320022c0))
+
 ## [1.1.3](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.2...v1.1.3) (2026-04-28)
 
 ### ⚙️ Miscellaneous
