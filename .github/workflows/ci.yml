@@ -20,6 +20,8 @@ jobs:
           cache: yarn
       - name: Enable Corepack
         run: corepack enable
+      - name: Activate Yarn 4.9.2
+        run: corepack prepare yarn@4.9.2 --activate
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint the code
@@ -35,6 +37,8 @@ jobs:
           cache: yarn
       - name: Enable Corepack
         run: corepack enable
+      - name: Activate Yarn 4.9.2
+        run: corepack prepare yarn@4.9.2 --activate
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build the project
