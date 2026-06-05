@@ -6,7 +6,6 @@ on:
       - '*'
 
 env:
-  NODE_VERSION: '24.x'
   PYTHON_VERSION: '3.13'
 
 jobs:
@@ -14,18 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Use Node.js ${{ env.NODE_VERSION }}
+      - name: Use Node.js LTS
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: Cache Node.js modules
-        uses: actions/cache@v5
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-${{ env.NODE_VERSION }}
-            ${{ runner.OS }}-
+          node-version: lts/*
+          cache: yarn
       - name: Install yarn for ACT (local testing)
         if: ${{ env.ACT }}
         run: npm install -g yarn
@@ -37,18 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Use Node.js ${{ env.NODE_VERSION }}
+      - name: Use Node.js LTS
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.NODE_VERSION }}
-      - name: Cache Node.js modules
-        uses: actions/cache@v5
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-${{ env.NODE_VERSION }}
-            ${{ runner.OS }}-
+          node-version: lts/*
+          cache: yarn
       - name: Install yarn for ACT (local testing)
         if: ${{ env.ACT }}
         run: npm install -g yarn
