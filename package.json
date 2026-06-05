@@ -66,6 +66,7 @@
     "yarn-audit-fix": "^10.1.1"
   },
   "resolutions": {
+    "@semantic-release/npm": "^13.1.5",
     "lodash": "^4.18.0"
   },
   "dependencies": {
