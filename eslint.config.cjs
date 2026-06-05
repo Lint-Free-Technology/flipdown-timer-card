@@ -14,6 +14,10 @@ const compat = new FlatCompat({
 
 module.exports = defineConfig([
   {
+    ignores: ['dist/**', 'node_modules/**'],
+  },
+  {
+    files: ['src/**/*.ts'],
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 2018,
@@ -27,7 +31,6 @@ module.exports = defineConfig([
     extends: compat.extends('plugin:@typescript-eslint/recommended', 'prettier', 'plugin:prettier/recommended'),
 
     rules: {
-      '@typescript-eslint/camelcase': 0,
       '@typescript-eslint/no-explicit-any': 0,
       '@typescript-eslint/no-unsafe-declaration-merging': 0,
     },
