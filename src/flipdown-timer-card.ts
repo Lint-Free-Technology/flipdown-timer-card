@@ -18,11 +18,19 @@ console.groupCollapsed(
 console.log('Readme:', 'https://github.com/Lint-Free-Technology/flipdown-timer-card');
 console.groupEnd();
 
+function getEntitySuggestion(_hass: HomeAssistant, entityId: string): { [key: string]: any } | null {
+  if (entityId.split('.')[0] == 'timer') {
+    return { config: { type: 'custom:flipdown-timer-card', entity: entityId } };
+  }
+  return null;
+}
+
 // This puts your card into the UI card picker dialog
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
   type: 'flipdown-timer-card',
   name: 'Flipdown Timer Card',
+  getEntitySuggestion,
   description: 'A template custom card for you to create something awesome',
 });
 
