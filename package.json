@@ -4,6 +4,7 @@
   "description": "Flipdown timer card for lovelace",
   "main": "dist/flipdown-timer-card.js",
   "type": "module",
+  "packageManager": "yarn@4.9.2",
   "scripts": {
     "build": "yarn run lint && yarn run rollup",
     "rollup": "rollup -c",
