@@ -13,7 +13,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
     "watch": "rollup -c --watch",
-    "postversion": "npm run build",
+    "postversion": "yarn run build",
     "audit-fix": "npx yarn-audit-fix"
   },
   "repository": {
