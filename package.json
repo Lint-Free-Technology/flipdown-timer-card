@@ -4,18 +4,18 @@
   "description": "Flipdown timer card for lovelace",
   "main": "dist/flipdown-timer-card.js",
   "type": "module",
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "npm@11.21.0",
   "scripts": {
-    "build": "yarn run lint && yarn run rollup",
+    "build": "npm run lint && npm run rollup",
     "rollup": "rollup -c",
     "babel": "babel dist/flipdown-timer-card.js --out-file dist/flipdown-timer-card.js",
     "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "yarn run lint --fix",
+    "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
     "watch": "rollup -c --watch",
-    "postversion": "yarn run build",
-    "audit-fix": "npx yarn-audit-fix"
+    "postversion": "npm run build",
+    "audit-fix": "npm audit fix"
   },
   "repository": {
     "type": "git",
@@ -62,10 +62,9 @@
     "semantic-release": "^25.0.3",
     "ts-lit-plugin": "^2.0.2",
     "typescript": "^6.0.3",
-    "typescript-styled-plugin": "^0.18.3",
-    "yarn-audit-fix": "^10.1.1"
+    "typescript-styled-plugin": "^0.18.3"
   },
-  "resolutions": {
+  "overrides": {
     "@semantic-release/npm": "^13.1.5",
     "lodash": "^4.18.0"
   },

@@ -17,12 +17,8 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: lts/*
-      - name: Enable Corepack
-        run: corepack enable
-      - name: Activate Yarn 4.9.2
-        run: corepack prepare yarn@4.9.2 --activate
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
       - name: Lint the code
         run: npm run lint --if-present
   build:
@@ -33,12 +29,8 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: lts/*
-      - name: Enable Corepack
-        run: corepack enable
-      - name: Activate Yarn 4.9.2
-        run: corepack prepare yarn@4.9.2 --activate
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
       - name: Build the project
         run: npm run build --if-present
 
