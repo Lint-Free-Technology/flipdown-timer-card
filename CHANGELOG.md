@@ -1,3 +1,10 @@
+### [1.2.2](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.2.1...v1.2.2) (2026-10-07)
+
+
+### ⚙️ Miscellaneous
+
+* Migrate to esbuild for build ([21106dc](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/21106dc5367bed26a3dacf654f19ae0ed8fd92ce))
+
 ### [1.2.1](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.2.0...v1.2.1) (2026-10-07)
 
 
