@@ -1,3 +1,11 @@
+### [1.2.1-beta.0](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.2.0...v1.2.1-beta.0) (2026-10-07)
+
+
+### ⚙️ Miscellaneous
+
+* Migrate release workflow from semantic-release to dedicated GutHub actions. ([639597c](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/639597c2d5750a5f9f17e49c8996b518355ce1c1))
+* Migrate to esbuild for build ([21106dc](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/21106dc5367bed26a3dacf654f19ae0ed8fd92ce))
+
 ## [1.2.0](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.1.3...v1.2.0) (2026-06-05)
 
 ### ⭐ New Features
