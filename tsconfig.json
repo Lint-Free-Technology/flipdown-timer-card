@@ -4,11 +4,6 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "lib": ["es2017", "dom", "dom.iterable"],
-    "plugins": [
-      {
-        "name": "ts-lit-plugin"
-      }
-    ],
     "noEmit": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
