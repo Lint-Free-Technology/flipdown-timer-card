@@ -1,7 +1,7 @@
 import esbuild from 'rollup-plugin-esbuild';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
-import babel from '@rollup/plugin-babel';
+import { babel } from '@rollup/plugin-babel';
 import serve from 'rollup-plugin-serve';
 import json from '@rollup/plugin-json';
 
@@ -29,7 +29,9 @@ const plugins = [
   json(),
   babel({
     exclude: 'node_modules/**',
+    presets: [['@babel/preset-env', { modules: false }], '@babel/preset-typescript'],
     babelHelpers: 'bundled',
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   }),
   dev && serve(serveopts),
 ];
