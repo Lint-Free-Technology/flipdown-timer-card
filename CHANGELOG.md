@@ -1,3 +1,11 @@
+### [1.2.3](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.2.2...v1.2.3) (2026-11-05)
+
+
+### ⚙️ Miscellaneous
+
+* Update readme for Home Assistant 2026.10.0 ([a49d88f](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/a49d88f90a30f58cb0fc5b59492f7d2c1ee620d2))
+* Update to Typescript v7 and associated toolchain updates ([7f3a112](https://github.com/Lint-Free-Technology/flipdown-timer-card/commit/7f3a11290a02309a370af645ca699fd2323bcb3e))
+
 ### [1.2.2](https://github.com/Lint-Free-Technology/flipdown-timer-card/compare/v1.2.1...v1.2.2) (2026-10-07)
 
 
