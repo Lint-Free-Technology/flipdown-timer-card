@@ -1,13 +1,16 @@
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-    open-pull-requests-limit: 0
-    target-branch: 'dev'
+      interval: "daily"
+    target-branch: "dev"
+    commit-message:
+      prefix: "chore(deps)"
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'weekly'
     target-branch: 'dev'
+    commit-message:
+      prefix: "chore(deps)"
