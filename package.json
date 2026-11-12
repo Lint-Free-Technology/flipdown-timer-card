@@ -42,7 +42,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "baseline-browser-mapping": "^2.11.27",
     "prettier": "^3.8.3",
-    "rollup": "^4.61.1",
+    "rollup": "^4.68.1",
     "rollup-plugin-serve": "^3.0.0",
     "rollup-plugin-esbuild": "^6.2.1",
     "typescript": "^7.0.2"
