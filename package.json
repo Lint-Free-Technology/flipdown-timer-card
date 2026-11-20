@@ -40,7 +40,7 @@
     "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
-    "baseline-browser-mapping": "^2.11.27",
+    "baseline-browser-mapping": "^2.11.38",
     "prettier": "^3.8.3",
     "rollup": "^4.61.1",
     "rollup-plugin-serve": "^3.0.0",
